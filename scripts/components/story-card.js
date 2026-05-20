@@ -59,11 +59,12 @@ export function createStoryCard({
     // Infine inserire meta e link nei rispettivi paragrafi con classe "story-meta"
     card.innerHTML = `
         <div class="story-header">
-            
+               
+            <h3 class="story-title">${titleLink}</h3>
             ${actions}
         </div>
-        
-        
+        <p class="story-meta">ID ${sanitizeHTML(String(story.id))}  Autore ${sanitizeHTML(authorLink)}</p>
+        <p class="story-meta">${sanitizeHTML(meta)}  ${sanitizeHTML(link)}</p>
         
     `;
 
